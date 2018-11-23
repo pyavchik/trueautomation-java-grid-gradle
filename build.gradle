@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group 'trueautomation-testng'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://mvn.trueautomation.io/artifactory/trueautomation"
+    }
+}
+
+dependencies {
+    testCompile group: 'io.trueautomation', name: 'trueautomation-client', version: '0.3.7'
+    testCompile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.11.0'
+    testCompile group: 'org.testng', name: 'testng', version: '6.14.3'
+}
+
+test {
+    useTestNG()
+    systemProperty "suiteFile", System.getProperty("suiteFile")
+    systemProperty "browser", System.getProperty("browser")
+}

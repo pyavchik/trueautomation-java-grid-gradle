@@ -1,0 +1,8 @@
+# Created by .ignore support plugin (hsz.mobi)
+.idea/
+trueautomation.json
+trueautomation-java-grid.iml
+.gradle/
+build/
+out/
+

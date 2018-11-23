@@ -1,0 +1,27 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="WIN" parallel="tests" thread-count="4">
+    <test name="Chrome">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="exampleTest"/>
+        </classes>
+    </test>
+    <test name="FireFox">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+        <class name="exampleTest"/>
+        </classes>
+    </test>
+    <test name="Edge">
+        <parameter name="browser" value="MicrosoftEdge"/>
+        <classes>
+        <class name="exampleTest"/>
+        </classes>
+    </test>
+    <test name="IE">
+        <parameter name="browser" value="internet explorer"/>
+        <classes>
+        <class name="exampleTest"/>
+        </classes>
+    </test>
+</suite>
