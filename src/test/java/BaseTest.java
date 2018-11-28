@@ -16,7 +16,7 @@ public class BaseTest {
     TrueAutomationDriver driver;
 
     @Parameters(value = {"browser"})
-    @BeforeTest(alwaysRun = true)
+    @BeforeMethod(alwaysRun = true)
     public void beforeTest (String browser) throws MalformedURLException {
         MutableCapabilities capabilities = new MutableCapabilities();
 
@@ -38,7 +38,7 @@ public class BaseTest {
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
     }
 
-    @AfterTest
+    @AfterMethod
     public void afterTest() {
         driver.quit();
     }
