@@ -21,7 +21,10 @@ dependencies {
 }
 
 test {
-    useTestNG()
-    systemProperty "suiteFile", System.getProperty("suiteFile")
     systemProperty "browser", System.getProperty("browser")
+    systemProperty "suiteFile", System.getProperty("suiteFile")
+    useTestNG(){
+        suites System.getProperty("suiteFile")
+    }
+
 }
