@@ -24,7 +24,7 @@ test {
     systemProperty "browser", System.getProperty("browser")
     systemProperty "suiteFile", System.getProperty("suiteFile")
     useTestNG(){
-        suites System.getProperty("suiteFile")
+        suites System.getProperty("suiteFile").toString()
     }
 
 }
